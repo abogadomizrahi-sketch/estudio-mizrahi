@@ -1,0 +1,510 @@
+/* Reset y Variables */
+:root {
+    --primary-blue: #0f1c3f;
+    --secondary-blue: #1a2b57;
+    --accent-gold: #e3b645;
+    --dark-gold: #d4a73a;
+    --whatsapp-green: #25d366;
+    --text-light: #ffffff;
+    --text-muted: #9ca3af;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(15, 28, 63, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-img {
+    height: 120px;
+    width: auto;
+    filter: drop-shadow(0 2px 8px rgba(227, 182, 69, 0.3));
+}
+
+.studio-info h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.studio-info .gold-text {
+    color: var(--accent-gold);
+}
+
+.contact-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--whatsapp-green);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.contact-phone i {
+    font-size: 1.2rem;
+}
+
+.admin-link {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.admin-link:hover {
+    background: var(--accent-gold);
+    color: var(--primary-blue);
+    transform: rotate(90deg) scale(1.1);
+}
+
+.header-cta {
+    background: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.header-cta:hover {
+    background: var(--dark-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(227, 182, 69, 0.4);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 5rem 1.5rem;
+    background: linear-gradient(rgba(15, 28, 63, 0.8), rgba(15, 28, 63, 0.9)),
+        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000') center/cover;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.badge {
+    background: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    color: var(--accent-gold);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 8px 25px rgba(227, 182, 69, 0.3);
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(227, 182, 69, 0.5);
+}
+
+/* Sección Destacada - Cobertura Geriátricos */
+.featured-section {
+    background: var(--secondary-blue);
+    padding: 4rem 1.5rem;
+}
+
+.geriatric-coverage {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(227, 182, 69, 0.1), rgba(227, 182, 69, 0.05));
+    border: 2px solid var(--accent-gold);
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(227, 182, 69, 0.2);
+}
+
+.geriatric-coverage::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(227, 182, 69, 0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.coverage-content {
+    position: relative;
+    z-index: 1;
+}
+
+.coverage-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.coverage-description {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+    font-size: 1.05rem;
+}
+
+.coverage-amount-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(227, 182, 69, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.amount-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.amount-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+}
+
+.update-link {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.update-link:hover {
+    color: var(--dark-gold);
+    gap: 0.5rem;
+}
+
+/* Sección de Servicios */
+.services-section {
+    padding: 5rem 1.5rem;
+    background: var(--primary-blue);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-gold);
+    text-underline-offset: 8px;
+}
+
+.services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(227, 182, 69, 0.2);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.service-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background: #080f22;
+    border-top: 4px solid var(--accent-gold);
+    padding: 3rem 1.5rem 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin-bottom: 1rem;
+}
+
+.footer-email {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Botón WhatsApp Flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    background: var(--whatsapp-green);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.whatsapp-float i {
+    font-size: 2rem;
+    color: white;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .logo-img {
+        height: 85px;
+    }
+
+    .studio-info h1 {
+        font-size: 1.2rem;
+    }
+
+    .contact-phone {
+        font-size: 0.85rem;
+    }
+
+    .header-cta {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.85rem 1.75rem;
+        font-size: 0.95rem;
+    }
+
+    .geriatric-coverage {
+        padding: 1.5rem;
+    }
+
+    .coverage-title {
+        font-size: 1.5rem;
+    }
+
+    .amount-value {
+        font-size: 1.75rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .whatsapp-float i {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

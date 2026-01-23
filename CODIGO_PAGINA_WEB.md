@@ -1,0 +1,196 @@
+# Código Completo del Sitio Web - Estudio Mizrahi
+
+## Archivo: index.html
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estudio Jurídico Mizrahi - Especialistas en Amparos de Salud, Discapacidad y Cobertura de Geriátricos en Buenos Aires">
+    <title>Estudio Mizrahi | Amparos de Salud y Discapacidad</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="LogoPNG.png" alt="Estudio Mizrahi Logo" class="logo-img">
+                <div class="studio-info">
+                    <h1>ESTUDIO <span class="gold-text">MIZRAHI</span></h1>
+                    <div class="contact-phone">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>1160081077</span>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <a href="admin.html" class="admin-link" title="Panel de Administración">
+                    <i class="fas fa-cog"></i>
+                </a>
+                <a href="https://wa.me/541160081077" target="_blank" class="header-cta">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="cta-text">Contacto</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">30 Años Defendiendo tu Salud</span>
+            
+            <h2 class="main-title">Amparos de Salud</h2>
+            
+            <h3 class="hero-title">
+                ¿La Obra Social te niega la cobertura? <br>
+                <span class="gold-text">Estamos para ayudarte.</span>
+            </h3>
+            
+            <p class="hero-subtitle">
+                Especialistas en Amparos de Salud, Discapacidad y cobertura de Geriátricos en Capital y GCBA.
+            </p>
+            
+            <a href="https://wa.me/541160081077" target="_blank" class="cta-button">
+                <i class="fab fa-whatsapp"></i>
+                Consulta Gratuita
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Section - Cobertura de Geriátricos -->
+    <section class="featured-section">
+        <div class="geriatric-coverage">
+            <div class="coverage-content">
+                <h3 class="coverage-title">
+                    <i class="fas fa-user-md"></i> Cobertura de Geriátricos
+                </h3>
+                <p class="coverage-description">
+                    Garantizamos el acceso y cobertura de internaciones geriátricas
+                </p>
+                <div class="coverage-amount-box">
+                    <div class="amount-label">Valor de cobertura actual hasta:</div>
+                    <div class="amount-value" id="coverageAmount">$ 3.546.053.924</div>
+                    <a href="admin.html" class="update-link">
+                        <i class="fas fa-edit"></i>
+                        Actualizar monto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h3 class="section-title">Servicios Especializados</h3>
+        <div class="services-grid">
+            <!-- Mantener su Obra Social al Jubilarse -->
+            <div class="service-card">
+                <i class="fas fa-user-shield service-icon"></i>
+                <h4 class="service-title">Mantener su Obra Social al Jubilarse</h4>
+                <p class="service-description">
+                    Mantener la cobertura de su obra social es un derecho por jubilarse y no quiere pasar a PAMI
+                </p>
+            </div>
+
+            <!-- Cuidados Domiciliarios -->
+            <div class="service-card">
+                <i class="fas fa-hospital service-icon"></i>
+                <h4 class="service-title">Cuidados domiciliarios</h4>
+                <p class="service-description">
+                    Cobertura de cuidadores domiciliarios, servicios de enfermería y acompañante
+                </p>
+            </div>
+
+            <!-- Medicamentos de Alto Costo -->
+            <div class="service-card">
+                <i class="fas fa-pills service-icon"></i>
+                <h4 class="service-title">Medicamentos de alto costo</h4>
+                <p class="service-description">
+                    Medicamentos oncológicos o de alto costo para la cobertura total o parcial
+                </p>
+            </div>
+
+            <!-- Amparos de Salud -->
+            <div class="service-card">
+                <i class="fas fa-heartbeat service-icon"></i>
+                <h4 class="service-title">Amparos de Salud</h4>
+                <p class="service-description">
+                    Acciones legales rápidas contra negativas de medicamentos o cirugías
+                </p>
+            </div>
+
+            <!-- Discapacidad -->
+            <div class="service-card">
+                <i class="fas fa-wheelchair service-icon"></i>
+                <h4 class="service-title">Discapacidad</h4>
+                <p class="service-description">
+                    Cobertura del 100% en terapias y apoyos (Ley 24.901)
+                </p>
+            </div>
+
+            <!-- Afiliaciones -->
+            <div class="service-card">
+                <i class="fas fa-file-contract service-icon"></i>
+                <h4 class="service-title">Afiliaciones</h4>
+                <p class="service-description">
+                    Defensa ante rechazos por preexistencias o límites de edad
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Estudio Jurídico Mizrahi</p>
+            <p class="footer-email">danielmizrahi@ymail.com</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/541160081077" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Tracking Script -->
+    <script src="tracking.js"></script>
+    
+    <!-- Coverage Amount Loader -->
+    <script>
+        // Cargar el valor de cobertura desde localStorage si existe
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedAmount = localStorage.getItem('mizrahi_coverage_amount');
+            if (savedAmount) {
+                document.getElementById('coverageAmount').textContent = savedAmount;
+            }
+        });
+    </script>
+</body>
+</html>
+```
+
+---
+
+Este archivo contiene la estructura completa HTML de la página web principal con:
+- Header con logo grande (120px), nombre del estudio y teléfono
+- Icono de acceso directo al panel de administración (engranaje)
+- Sección hero con título "Amparos de Salud"
+- Sección destacada de cobertura de geriátricos con valor editable
+- 6 tarjetas de servicios especializados
+- Footer con información de contacto
+- Botón flotante de WhatsApp
+- Scripts de tracking y carga de datos
+
+**Para subir a GitHub:** Copie este código completo y péguelo en su archivo `index.html`

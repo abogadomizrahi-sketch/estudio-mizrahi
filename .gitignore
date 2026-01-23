@@ -1,0 +1,30 @@
+# Sistema operativo
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDEs y editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
+# Archivos temporales
+*.log
+*.tmp
+*.swp
+*~
+
+# Node modules (si se usa en el futuro)
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Archivos de backup
+*.bak
+*.backup
+
+# Archivos de sistema
+.env
+.env.local
