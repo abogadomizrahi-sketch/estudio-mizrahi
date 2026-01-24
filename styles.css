@@ -49,42 +49,41 @@ body {
     gap: 1.5rem;
 }
 
-/* Logo más grande y recortado */
-/* Logo ajustado: Mezcla para quitar blanco y escala para recortar bordes */
-/* Logo contenido estrictamente en la barra */
+/* Logo - Tamaño optimizado para la barra */
 .logo-img {
-    height: 70px;
-    /* Reducido para que no sobresalga */
+    height: 85px;
+    /* Aumentado al máximo sin romper */
     width: auto;
     object-fit: contain;
-    /* Quitamos el scale agresivo para evitar desbordes */
     transform: none;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
     margin-right: 15px;
 }
 
-/* Título metálico */
-/* Título metálico unificado con relieve */
-/* Título: Fuente similar al logo (Serif), más chico y metálico */
+/* Título: Estilo clásico, Title Case, Metálico Cromado */
 .studio-info h1 {
     font-family: 'Cinzel', serif;
-    /* Fuente estilo clásico/legal */
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     /* Un poco más pequeña */
     font-weight: 700;
-    text-transform: uppercase;
-    /* Generalmente los logos legales usan mayúsculas, pero configurable */
-    letter-spacing: 1px;
+    text-transform: none;
+    /* Respetar may./min.: "Estudio Mizrahi" */
+    letter-spacing: 0.5px;
     margin-bottom: 0px;
 
-    /* Gradiente metálico refinado */
-    background: linear-gradient(to bottom, #dcdcdc 0%, #888888 50%, #dcdcdc 100%);
+    /* Gradiente metálico de alto contraste (Cromado) */
+    background: linear-gradient(to bottom,
+            #ffffff 0%,
+            #d0d0d0 30%,
+            #a0a0a0 50%,
+            #d0d0d0 70%,
+            #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 
-    /* Sombra sutil */
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+    /* Sombra dura para efecto relieve */
+    filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.6));
 }
 
 .studio-info .gold-text {
