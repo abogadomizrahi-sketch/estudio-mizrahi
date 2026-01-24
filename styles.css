@@ -513,8 +513,8 @@ body {
     }
 
     .hero {
-        padding: 9.5rem 1rem 3rem;
-        /* Ajuste fino de padding para móvil */
+        padding: 8.5rem 1rem 3rem;
+        /* Subir un poco más el contenido */
     }
 
     .main-title {
@@ -543,7 +543,12 @@ body {
     }
 
     .amount-value {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
+        /* Ajustado para que entre todo en una línea */
+        white-space: nowrap;
+        /* Evita que el $ y el numero se separen */
+        display: inline-block;
+        /* Asegura comportamiento de bloque en línea */
     }
 
     .services-grid {
