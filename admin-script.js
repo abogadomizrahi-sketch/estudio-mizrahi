@@ -4,7 +4,7 @@
  */
 
 // Configuración
-const ADMIN_PASSWORD = 'mizrahi2025'; // Cambiar en producción
+const ADMIN_PASSWORD = 'PaginaM'; // Cambiar en producción
 const STORAGE_KEYS = {
     coverage: 'mizrahi_coverage_amount',
     visits: 'mizrahi_visits',
@@ -199,13 +199,18 @@ function loadVisitorTable() {
         const row = document.createElement('tr');
 
         const timestamp = new Date(visit.timestamp);
-        const isMobile = /Mobile|Android|iPhone/i.test(visit.userAgent);
+        // Use stored device type or fallback to userAgent check for old records
+        const deviceType = visit.deviceType || (/Mobile|Android|iPhone/i.test(visit.userAgent) ? 'Móvil' : 'PC');
+        const platform = visit.platform || '-';
 
         row.innerHTML = `
             <td>${formatDateTime(timestamp)}</td>
             <td>${visit.page}</td>
             <td>${visit.referrer}</td>
-            <td>${isMobile ? '<i class="fas fa-mobile-alt"></i> Móvil' : '<i class="fas fa-desktop"></i> PC'}</td>
+            <td>
+                ${deviceType === 'Móvil' ? '<i class="fas fa-mobile-alt"></i>' : '<i class="fas fa-desktop"></i>'} 
+                ${deviceType} <small style="color: grey;">(${platform})</small>
+            </td>
             <td>${visit.screenResolution}</td>
         `;
 
@@ -227,10 +232,10 @@ function exportVisitorData() {
 
     visits.forEach(visit => {
         const timestamp = new Date(visit.timestamp);
-        const isMobile = /Mobile|Android|iPhone/i.test(visit.userAgent);
-        const device = isMobile ? 'Móvil' : 'PC';
+        const deviceType = visit.deviceType || (/Mobile|Android|iPhone/i.test(visit.userAgent) ? 'Móvil' : 'PC');
+        const platform = visit.platform || 'Desconocido';
 
-        csv += `"${formatDateTime(timestamp)}","${visit.page}","${visit.referrer}","${device}","${visit.screenResolution}","${visit.language}"\n`;
+        csv += `"${formatDateTime(timestamp)}","${visit.page}","${visit.referrer}","${deviceType} (${platform})","${visit.screenResolution}","${visit.language}"\n`;
     });
 
     // Descargar archivo
