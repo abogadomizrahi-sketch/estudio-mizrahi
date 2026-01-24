@@ -27,8 +27,8 @@ body {
 .header {
     position: relative;
     z-index: 1000;
-    /* Azul con transparencia para ver levemente el fondo (0.7 opacity) */
-    background: rgba(15, 28, 63, 0.7);
+    /* Mayor transparencia (0.5) */
+    background: rgba(15, 28, 63, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 0.5rem 0;
 }
@@ -51,34 +51,40 @@ body {
 
 /* Logo más grande y recortado */
 /* Logo ajustado: Mezcla para quitar blanco y escala para recortar bordes */
+/* Logo contenido estrictamente en la barra */
 .logo-img {
-    height: 90px;
-    /* Tamaño consistente con la barra */
+    height: 70px;
+    /* Reducido para que no sobresalga */
     width: auto;
-    /* mix-blend-mode: multiply; Ayuda si el fondo es blanco para hacerlo transparente */
-    object-fit: cover;
-    /* Intenta llenar */
-    transform: scale(1.3);
-    /* Zoom para "recortar" bordes blancos externos */
+    object-fit: contain;
+    /* Quitamos el scale agresivo para evitar desbordes */
+    transform: none;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-    margin: 0 10px;
+    margin-right: 15px;
 }
 
 /* Título metálico */
 /* Título metálico unificado con relieve */
+/* Título: Fuente similar al logo (Serif), más chico y metálico */
 .studio-info h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    text-transform: none;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.25rem;
-    /* Gradiente metálico plateado/dorado para TODO el texto */
-    background: linear-gradient(to bottom, #eaeaea 0%, #c0c0c0 40%, #dfdfdf 100%);
+    font-family: 'Cinzel', serif;
+    /* Fuente estilo clásico/legal */
+    font-size: 1.4rem;
+    /* Un poco más pequeña */
+    font-weight: 700;
+    text-transform: uppercase;
+    /* Generalmente los logos legales usan mayúsculas, pero configurable */
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+
+    /* Gradiente metálico refinado */
+    background: linear-gradient(to bottom, #dcdcdc 0%, #888888 50%, #dcdcdc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* Efecto relieve (sombra dura) */
-    filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.5));
+
+    /* Sombra sutil */
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
 }
 
 .studio-info .gold-text {
