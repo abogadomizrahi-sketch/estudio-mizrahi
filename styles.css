@@ -155,7 +155,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    padding: 8rem 1.5rem 5rem;
+    padding: 12rem 1.5rem 5rem;
     /* Increased top padding to account for fixed header */
     background: linear-gradient(rgba(15, 28, 63, 0.8), rgba(15, 28, 63, 0.9)),
         url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000') center/cover;
