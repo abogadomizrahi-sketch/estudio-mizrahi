@@ -25,14 +25,14 @@ body {
 
 /* Header */
 .header {
-    position: sticky;
-    top: 0;
+    position: relative; /* Cambiado de sticky a relative para que no sea fijo */
+    /* top: 0; Eliminado */
     z-index: 1000;
-    background: rgba(15, 28, 63, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 1rem 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: transparent; /* Cambiado de color sólido/blur a transparente */
+    /* backdrop-filter: blur(10px); Eliminado */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Borde más sutil */
+    padding: 0.5rem 0; /* Padding reducido para que sea menos ancho */
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); Eliminado para integrar más */
 }
 
 .header-content {
@@ -51,22 +51,36 @@ body {
     gap: 1.5rem;
 }
 
+/* Logo más grande y recortado */
 .logo-img {
-    height: 120px;
+    height: 160px; /* Aumentado de 120px */
     width: auto;
     filter: drop-shadow(0 2px 8px rgba(227, 182, 69, 0.3));
+    margin: -10px 0; /* Margen negativo para recortar un poco el espacio blanco */
+    transform: scale(1.1); /* Efecto zoom leve */
 }
 
+/* Título metálico */
 .studio-info h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-size: 1.8rem; /* Ligeramente más grande */
+    font-weight: 800; /* Más grueso */
+    text-transform: none; /* Quitamos UPPERCASE forzado (respetará el HTML) */
     letter-spacing: 0.5px;
     margin-bottom: 0.25rem;
+    background: linear-gradient(to bottom, #f0f0f0, #a0a0a0, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra para resaltar sobre fondo */
 }
 
+
 .studio-info .gold-text {
-    color: var(--accent-gold);
+    /* Mantenemos estilo base pero potenciamos el metálico */
+    color: var(--accent-gold); 
+    background: linear-gradient(to bottom, #fee140, #fa709a 0%, #d4a73a 100%); /* Efecto dorado rico */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact-phone {
@@ -278,7 +292,7 @@ body {
     font-weight: 800;
     color: var(--accent-gold);
     font-family: 'Courier New', monospace;
-    letter-spacing: 1px;
+    letter-spacing: -1px; /* Números más juntos */
 }
 
 .update-link {
