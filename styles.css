@@ -25,12 +25,18 @@ body {
 
 /* Header */
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     /* Mayor transparencia (0.5) */
-    background: rgba(15, 28, 63, 0.5);
+    background: rgba(15, 28, 63, 0.85);
+    /* Increased opacity slightly for readability since it is fixed */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 0.5rem 0;
+    backdrop-filter: blur(10px);
+    /* Added blur for better aesthetics */
 }
 
 .header-content {
@@ -51,7 +57,7 @@ body {
 
 /* Logo - Tamaño optimizado para la barra */
 .logo-img {
-    height: 85px;
+    height: 120px;
     /* Aumentado al máximo sin romper */
     width: auto;
     object-fit: contain;
@@ -149,7 +155,8 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    padding: 5rem 1.5rem;
+    padding: 8rem 1.5rem 5rem;
+    /* Increased top padding to account for fixed header */
     background: linear-gradient(rgba(15, 28, 63, 0.8), rgba(15, 28, 63, 0.9)),
         url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000') center/cover;
     text-align: center;
