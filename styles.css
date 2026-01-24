@@ -25,14 +25,12 @@ body {
 
 /* Header */
 .header {
-    position: relative; /* Cambiado de sticky a relative para que no sea fijo */
-    /* top: 0; Eliminado */
+    position: relative;
     z-index: 1000;
-    background: transparent; /* Cambiado de color sólido/blur a transparente */
-    /* backdrop-filter: blur(10px); Eliminado */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Borde más sutil */
-    padding: 0.5rem 0; /* Padding reducido para que sea menos ancho */
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); Eliminado para integrar más */
+    /* Azul con transparencia para ver levemente el fondo (0.7 opacity) */
+    background: rgba(15, 28, 63, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 0;
 }
 
 .header-content {
@@ -52,35 +50,43 @@ body {
 }
 
 /* Logo más grande y recortado */
+/* Logo ajustado: Mezcla para quitar blanco y escala para recortar bordes */
 .logo-img {
-    height: 160px; /* Aumentado de 120px */
+    height: 90px;
+    /* Tamaño consistente con la barra */
     width: auto;
-    filter: drop-shadow(0 2px 8px rgba(227, 182, 69, 0.3));
-    margin: -10px 0; /* Margen negativo para recortar un poco el espacio blanco */
-    transform: scale(1.1); /* Efecto zoom leve */
+    /* mix-blend-mode: multiply; Ayuda si el fondo es blanco para hacerlo transparente */
+    object-fit: cover;
+    /* Intenta llenar */
+    transform: scale(1.3);
+    /* Zoom para "recortar" bordes blancos externos */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    margin: 0 10px;
 }
 
 /* Título metálico */
+/* Título metálico unificado con relieve */
 .studio-info h1 {
-    font-size: 1.8rem; /* Ligeramente más grande */
-    font-weight: 800; /* Más grueso */
-    text-transform: none; /* Quitamos UPPERCASE forzado (respetará el HTML) */
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: none;
     letter-spacing: 0.5px;
     margin-bottom: 0.25rem;
-    background: linear-gradient(to bottom, #f0f0f0, #a0a0a0, #f0f0f0);
+    /* Gradiente metálico plateado/dorado para TODO el texto */
+    background: linear-gradient(to bottom, #eaeaea 0%, #c0c0c0 40%, #dfdfdf 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra para resaltar sobre fondo */
+    /* Efecto relieve (sombra dura) */
+    filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.5));
 }
 
-
 .studio-info .gold-text {
-    /* Mantenemos estilo base pero potenciamos el metálico */
-    color: var(--accent-gold); 
-    background: linear-gradient(to bottom, #fee140, #fa709a 0%, #d4a73a 100%); /* Efecto dorado rico */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* Hacemos que herede el estilo del padre para que sea uniforme */
+    background: inherit;
+    -webkit-text-fill-color: inherit;
+    -webkit-background-clip: inherit;
+    color: inherit;
 }
 
 .contact-phone {
@@ -292,7 +298,8 @@ body {
     font-weight: 800;
     color: var(--accent-gold);
     font-family: 'Courier New', monospace;
-    letter-spacing: -1px; /* Números más juntos */
+    letter-spacing: -1px;
+    /* Números más juntos */
 }
 
 .update-link {
