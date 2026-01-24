@@ -513,7 +513,8 @@ body {
     }
 
     .hero {
-        padding: 3rem 1rem;
+        padding: 8rem 1rem 3rem;
+        /* Aumentado padding top para móvil */
     }
 
     .main-title {
