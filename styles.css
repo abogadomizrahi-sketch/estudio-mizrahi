@@ -573,6 +573,12 @@ body {
         display: inline-block;
     }
 
+    .section-title {
+        font-size: 1.8rem;
+        /* Reducido para que entre completo */
+        margin-bottom: 2rem;
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
