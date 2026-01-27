@@ -13,6 +13,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    /* Suavizar scroll en iOS */
 }
 
 body {
@@ -20,7 +32,6 @@ body {
     background-color: var(--primary-blue);
     color: var(--text-light);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 /* Header */
@@ -76,6 +87,9 @@ body {
     /* Respetar may./min.: "Estudio Mizrahi" */
     letter-spacing: 0.5px;
     margin-bottom: 0px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     /* Gradiente metálico de alto contraste (Cromado) */
     background: linear-gradient(to bottom,
@@ -547,12 +561,10 @@ body {
     }
 
     .amount-value {
-        font-size: 1.6rem;
-        /* Ajustado para que entre todo en una línea */
+        font-size: clamp(1.2rem, 5vw, 1.6rem);
+        /* Tamaño fluido para que no desborde */
         white-space: nowrap;
-        /* Evita que el $ y el numero se separen */
         display: inline-block;
-        /* Asegura comportamiento de bloque en línea */
     }
 
     .services-grid {
@@ -561,10 +573,14 @@ body {
     }
 
     .whatsapp-float {
+        position: fixed !important;
+        /* Forzar fixed */
         width: 50px;
         height: 50px;
         bottom: calc(1.5rem + env(safe-area-inset-bottom));
         right: 1.5rem;
+        z-index: 9999;
+        /* Mayor jerarquía */
     }
 
     .whatsapp-float i {
