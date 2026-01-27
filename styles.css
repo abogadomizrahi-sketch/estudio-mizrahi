@@ -513,8 +513,12 @@ body {
     }
 
     .hero {
-        padding: 8.5rem 1rem 3rem;
-        /* Subir un poco más el contenido */
+        padding: calc(8.5rem + env(safe-area-inset-top)) 1rem 3rem;
+        min-height: 100dvh;
+        /* Altura dinámica para Instagram */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .main-title {
@@ -559,7 +563,7 @@ body {
     .whatsapp-float {
         width: 50px;
         height: 50px;
-        bottom: 1.5rem;
+        bottom: calc(1.5rem + env(safe-area-inset-bottom));
         right: 1.5rem;
     }
 
