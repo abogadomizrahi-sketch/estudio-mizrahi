@@ -574,9 +574,12 @@ body {
     }
 
     .section-title {
-        font-size: 1.8rem;
-        /* Reducido para que entre completo */
+        font-size: clamp(1.4rem, 7vw, 1.8rem);
+        /* Se encoge en pantallas muy pequeñas */
         margin-bottom: 2rem;
+        word-wrap: normal;
+        overflow-wrap: normal;
+        padding: 0 5px;
     }
 
     .services-grid {
