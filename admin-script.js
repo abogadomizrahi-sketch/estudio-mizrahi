@@ -95,7 +95,7 @@ function handleLogout() {
 // Cargar datos del dashboard
 function loadDashboardData() {
     // Cargar monto de cobertura actual
-    const currentAmount = localStorage.getItem(STORAGE_KEYS.coverage) || '$ 3.546.053.924';
+    const currentAmount = localStorage.getItem(STORAGE_KEYS.coverage) || '$ 4.180.832,92';
     document.getElementById('currentCoverage').textContent = currentAmount;
 
     // Limpiar el input y poner solo el número sin formato
